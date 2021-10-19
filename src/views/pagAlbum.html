@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <link rel="stylesheet" href="/publico/css/style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+        <title>Projeto Negritude em Debate</title>
+    </head>
+
+    <body>
+
+        <section>
+            <nav>
+                <div class="container title-album">
+                    <h1 class="">Seja bem-vinda(o)!</h1>
+                </div>
+            </nav>
+
+            <article>
+            
+                <div class="container mt-5 d-flex flex-column col-8 form-album">
+
+                    <!--Título do Formulário-->
+                    <div class="container text-center">
+                        <h2>Álbum Digital</h2>
+                    </div>
+
+                    <!--Botões do Tab-->
+                    <ul class="nav nav-pills" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="dados-tab" data-bs-toggle="tab" data-bs-target="#dados" type="button" role="tab" aria-controls="dados" aria-selected="true">Dados</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="foto-tab" data-bs-toggle="tab" data-bs-target="#foto" type="button" role="tab" aria-controls="foto" aria-selected="false">Foto</button>
+                        </li>
+                    </ul>
+
+                    <!--Formulário-->
+                    <form action="/album-digital" method="post" autocomplete="on">
+                        <div class="tab-content">
+
+                            <!--Página dos Dados-->
+                            <div class="tab-pane active div-tab" id="dados" role="tabpanel" aria-labelledby="dados-tab">
+
+                                <div class="col-md-12">
+                                    <label for="nome" class="form-label">Nome Completo</label>
+                                    <input type="text" name="nome" id="nome" class="form-control">
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <label for="cpf" class="form-label">CPF</label>
+                                        <input type="text" name="cpf" id="cpf" class="form-control" onkeypress="$(this).mask('000.000.000-00');">
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label for="nascimento" class="form-label">Data de Nascimento</label>
+                                        <input type="date" name="nascimento" id="nascimento" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6" id="divNomeRes">
+                                        <label for="nomeResponsavel" class="form-label">Nome do Responsável</label>
+                                        <input type="text" name="nomeResponsavel" id="nomeResponsavel" class="form-control" placeholder="Preencha caso seja menor de idade">
+                                    </div>
+
+                                    <div class="col-md-6" id="divCpfRes">
+                                        <label for="cpfResponsavel" class="form-label">CPF do Responsável</label>
+                                        <input type="text" name="cpfResponsavel" id="cpfResponsavel" class="form-control" placeholder="Preencha caso seja menor de idade"  onkeypress="$(this).mask('000.000.000-00');">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label for="telefone" class="form-label">Telefone/WhatsApp</label>
+                                        <input type="text" name="telefone" id="telefone" class="form-control"  onkeypress="$(this).mask('(00) 00000-0000');">
+                                    </div>
+
+                                    <div class="col-md-8">
+                                        <label for="email" class="form-label">E-mail</label>
+                                        <input type="email" name="email" id="email" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <label for="estado" class="form-label">Estado</label>
+                                        <select name="estado" id="estado" class="form-select">
+                                            <option>MS</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-10">
+                                        <label for="cidade" class="form-label">Cidade</label>
+                                        <select name="cidade" id="cidade" class="form-select">
+                                            <option>Água Clara</option>
+                                            <option>Alcinópolis</option>
+                                            <option>Amambaí</option>
+                                            <option>Anastácio</option>
+                                            <option>Anaurilândia</option>
+                                            <option>Angélica</option>
+                                            <option>Antônio João</option>
+                                            <option>Aparecida do Taboado</option>
+                                            <option>Aquidauana</option>
+                                            <option>Aral Moreira</option>
+                                            <option>Bandeirantes</option>
+                                            <option>Bataguassu</option>
+                                            <option>Batayporã</option>
+                                            <option>Bela Vista</option>
+                                            <option>Bodoquena</option>
+                                            <option>Bonito</option>
+                                            <option>Brasilândia</option>
+                                            <option>Caarapó</option>
+                                            <option>Camapuã</option>
+                                            <option>Campo Grande</option>
+                                            <option>Caracol</option>
+                                            <option>Cassilândia</option>
+                                            <option>Chapadão do Sul</option>
+                                            <option>Corguinho</option>
+                                            <option>Coronel Sapucaia</option>
+                                            <option>Corumbá</option>
+                                            <option>Costa Rica</option>
+                                            <option>Coxim</option>
+                                            <option>Deodápolis</option>
+                                            <option>Dois Irmãos do Buruti</option>
+                                            <option>Douradina</option>
+                                            <option>Dourados</option>
+                                            <option>Eldorado</option>
+                                            <option>Fátima do Sul</option>
+                                            <option>Figueirão</option>
+                                            <option>Glória de Dourados</option>
+                                            <option>Guia Lopes da Laguna</option>
+                                            <option>Iguatemi</option>
+                                            <option>Inocência</option>
+                                            <option>Itaporã</option>
+                                            <option>Itaquiraí</option>
+                                            <option>Ivinhema</option>
+                                            <option>Japorã</option>
+                                            <option>Jaraguari</option>
+                                            <option>Jardim</option>
+                                            <option>Jateí</option>
+                                            <option>Juti</option>
+                                            <option>Ladário</option>
+                                            <option>Laguna Carapã</option>
+                                            <option>Maracaju</option>
+                                            <option>Miranda</option>
+                                            <option>Mundo Novo</option>
+                                            <option>Naviraí</option>
+                                            <option>Nioaque</option>
+                                            <option>Nova Alvorada do Sul</option>
+                                            <option>Nova Andradina</option>
+                                            <option>Novo Horizonte do Sul</option>
+                                            <option>Paraíso das Águas</option>
+                                            <option>Paranaíba</option>
+                                            <option>Paranhos</option>
+                                            <option>Pedro Gomes</option>
+                                            <option>Ponta Porã</option>
+                                            <option>Porto Murtinho</option>
+                                            <option>Ribas do Rio Pardo</option>
+                                            <option>Rio Brilhante</option>
+                                            <option>Rio Negro</option>
+                                            <option>Rio Verde de Mato Grosso</option>
+                                            <option>Rochedo</option>
+                                            <option>Santa Rita do Padro</option>
+                                            <option>São Gabriel do Oeste</option>
+                                            <option>Selvíria</option>
+                                            <option>Sete Quedas</option>
+                                            <option>Sidrolândia</option>
+                                            <option>Sonora</option>
+                                            <option>Tacuru</option>
+                                            <option>Taquarussu</option>
+                                            <option>Terenos</option>
+                                            <option>Três Lagoas</option>
+                                            <option>Vicentina</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="mt-3 text-center">
+                                    <button class="btn btn-primary col-md-2" type="button" id="proximo">Próximo</button>
+                                </div>
+                            </div>
+                            
+
+                            <!-- Página da Foto -->
+                            <div class="tab-pane div-tab" id="foto" role="tabpanel" aria-labelledby="foto-tab">
+
+                                <div class="col-md-12">
+                                    <label for="objetivos" class="form-label">Objetivos</label>
+                                    <textarea readonly type="text" name="objetivos" class="form-control" rows="3">O projeto tem como objetivo visibilizar a beleza a cultura e a ancestralidade negra existentes no Mato Grosso do Sul, historicamente apagados e fora dos padrões estéticos eurocêntricos.
+                                        &#013;Oportunizará assim, as discussões étnico-raciais capazes de qualificar e encorajar as professoras e professores a trabalharem com a problemática da população negra, em sala de aula, na tentativa de diminuir o arranjo da desigualdade existente no país.
+                                        &#013;Para isso, a partir das fotografias selecionadas para a mostra fotográfica, irá se elaborar um álbum de fotografias que ao ser finalizado, será direcionado para escolas públicas, com a intenção de contribuir com o debate da Lei 10.639/03 que determina o ensino de História e Cultura Afro-brasileira nas escolas.
+                                    </textarea>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <label for="regras" class="form-label">Regras</label>
+                                    <textarea readonly type="text" name="regras" class="form-control" rows="3">
+&#128420; Cada pessoa poderá participar com uma fotografia
+&#128420; A fotografia deve ser no formato digital JPG/JPEG
+&#128420; A fotografia poderá ser colorida ou preta e branco
+&#128420; A técnica para criação é livre mas precisa seguir o tema Beleza Negra Resiste
+&#128420; Cada pessoa só poderá ser premiada uma única vez
+&#128420; As fotografias serão selecionadas por um júri composto de pessoas pretas, que julgará a beleza negra a partir dos elementos que permitirão evidenciar as conexões com as raízes negras, com a ancestralidade negra, com a diáspora negra, com as pequenas Áfricas que existem em cada pessoa negra que vive em Mato Grosso do Sul
+&#128420; Toda fotografia deve ser encaminhada com a autorização de uso de imagem. A UFMS e o IFMS reservam para si, desde já, o direito incontestável de reproduzir as fotografias inscritas em seu material institucional a qualquer momento e por tempo indeterminado, dando os devidos créditos ao fotógrafo.
+                                    </textarea>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <label for="foto" class="form-label">Foto</label>
+                                    <input type="file" name="foto" class="form-control">
+                                </div>
+
+                                <div class="row mt-1">
+                                    <div class="col-md-6">
+                                        <label for="titulo" class="form-label">Título da Foto</label>
+                                        <input type="text" name="titulo" class="form-control">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="fotografa" class="form-label">Nome do(a) Fotógrafo(a)</label>
+                                        <input type="text" name="fotografa" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-3 mt-5">
+                                        <label for="autorizacao" class="float-left form-label">Li o termo e autorizo o uso da minha imagem</label>
+                                    </div>
+
+                                    <div class="col-md-1 mt-5">
+                                        <input type="checkbox" name="autorizacao" class="form-check">
+                                    </div>
+
+                                    <div class="col-md-8">
+                                        <label for="termo" class="form-label">Termo</label>
+                                        <textarea readonly type="text" name="termo" class="form-control" rows="3">Autorizo a Universidade Federal do Mato Grosso do Sul e o Instituto Federal do Mato Grosso do Sul, bem como a/o fotógrafa/o a utilizarem a minha imagem para fins de participação na mostra fotográfica "Beleza Negra Resiste". Poderão utilizá-la na divulgação de materiais impressos, audiovisuais e eletrônicos, sem fins lucrativos e também poderá ser utilizada por tempo indeterminado. Fica assim autorizada, de livre e espontânea vontade, para os mesmos fins a cessão de direitos de veiculação, não recebendo para tanto qualquer tipo de remuneração. 
+        &#013;
+        Por meio desta autorização, eu libero a UFMS e o IFMS, acima citados, seus representantes legais ou fornecedores, de futuros processos e queixas por violação de privacidade ou de direito de propriedade que eu poderia ter em relação a tal produção.  
+        &#013;
+        Ao marcar o aceite da leitura do termo e autorização da imagem, concordo com as regras e autorização dispostas nesta página.
+                                        </textarea>
+                                    </div>
+                                </div>
+
+                                <div class="text-center">
+                                    <button class="btn btn-primary col-md-2" type="button" id="anterior">Anterior</button>
+
+                                    <input type="submit" value="Enviar" class="btn btn-primary col-md-2 offset-md-1">
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </article>
+        </section>
+
+        <script>
+            // Botões da tab escondidos
+            $('#dados-tab').hide();
+            $('#foto-tab').hide();
+
+            // Botão "Próximo" leva para a tab da foto
+            $('#proximo').click(function() {
+                $('#foto-tab').trigger('click');
+            });
+
+            //Botão "Anterior" leva para a tab dos dados
+            $('#anterior').click(function() {
+                $('#dados-tab').trigger('click');
+            });
+
+            // Os campos dos responsáveis estão no modo de apenas leitura
+            document.getElementById('nomeResponsavel').readOnly = true;
+            document.getElementById('cpfResponsavel').readOnly = true;
+
+            $('#nascimento').blur(function () {
+                let d = new Date();
+                let nA = $('#nascimento').val().split("-");
+                let n = new Date(nA[1] + '-' + nA[2] + '-' + nA[0]);
+                let ano = d.getFullYear() - n.getFullYear();
+                let m = d.getMonth() - n.getMonth();
+                if (m < 0 || (m === 0 && d.getDate() < n.getDate())) {
+                    ano--;
+                }
+                // Os campos saem do modo de apenas leitura caso o(a) usuário(a) seja menor de idade
+                if (ano < 18) {
+                    document.getElementById('nomeResponsavel').readOnly = false;
+                    document.getElementById('cpfResponsavel').readOnly = false;
+                } else {
+                    document.getElementById('nomeResponsavel').readOnly = true;
+                    document.getElementById('cpfResponsavel').readOnly = true;
+                    
+                }
+            });
+        </script>
+
+    </body>
+</html>

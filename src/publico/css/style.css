@@ -1,0 +1,34 @@
+body {
+    /* Usei isso para aplicar o Golden Ration nesta página
+    background-image: url(img/goldenRatio.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    */
+
+    
+    background: linear-gradient( to left, #FAD8CC 62%, #D97C0B 38%);
+    height: 657px;
+    width: 1050px;
+    
+}
+
+p, label, h2, h1 {
+    color: #260101;
+}
+
+@media (max-width: 600px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.form-album {
+    margin-left: 580px;
+}
+
+.title-album {
+    margin-right: 100px;
+    margin-left: 60px;
+}
