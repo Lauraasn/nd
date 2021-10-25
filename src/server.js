@@ -1,5 +1,6 @@
-const express = require("express");
+import path from "path";
 
+const express = require("express");
 const app = express();
 
 // configuração do parser para requisições post
@@ -7,6 +8,17 @@ app.use(express.json());
 app.use(express.urlencoded({
     extended: true
 }))
+
+//configurações estáticas
+app.use('/bscss', express.static('./node_modules/bootstrap/dist/css'));
+app.use('/bsjs', express.static('./node_modules/bootstrap/dist/js'));
+app.use('/jquery', express.static('./node_modules/jquery/dist'));
+//app.use('popperjs', express.static('./node_modules/popper.js/dist/umd'));
+app.use('/publico', express.static(__dirname + '/publico'));
+
+//configurações das páginas
+app.set('views',path.join(__dirname,'views'));
+app.set('view engine', 'pug');
 
 /*
 const pool = require('./dao/conexao');
@@ -18,7 +30,44 @@ app.listen(PORTA,function() {
     console.log(`Servidor rodando na porta ${PORTA}`); //antes era "8080" no lugar de "${PORTA}"
 });
 
-// rotas
+//Rota para a pasta "routes"
+const routes = require('./routes');
+routes(app);
+
+//rotas de teste
+app.get('/teste', function (req, resp) {
+    resp.render('teste');
+});
+
+//rotas da aplicação (pug)
+app.get('/album', function (req, resp) {
+    resp.render('pagAlbum')
+});
+
+app.get('/', function (req, resp) {
+    resp.render('pagAlbum')
+});
+
+app.get('/relatorio', function (req, resp) {
+    resp.render('pagRelatorioAlbum')
+});
+
+/* rotas da aplicação (feitas da forma antiga)
+app.get('/album', function (req, resp) {
+    resp.sendFile(__dirname + '/views/pagAlbum.html')
+});
+
+app.get('/', function (req, resp) {
+    resp.sendFile(__dirname + '/views/pagAlbum.html')
+});
+
+app.get('/relatorio', function (req, resp) {
+    resp.sendFile(__dirname + '/views/pagRelatorioAlbum.html')
+});
+*/
+
+
+/* rotas
 app.get('/teste', (req, res) => res
     .status(200)
     .send({
@@ -26,7 +75,7 @@ app.get('/teste', (req, res) => res
     })
 );
 
-/*
+
 app.use('/publico', express.static(__dirname + '/publico'));
 
 app.get('/album', function(req, resp) {
