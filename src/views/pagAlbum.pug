@@ -22,7 +22,7 @@ section
         li.nav-item(role="presentation")
           button.nav-link#foto-tab(data-bs-toggle="tab", data-bs-target="#foto", type="button", role="tab", aria-controls="foto", aria-selected="false") Foto
       // Formulário
-      form(action="/album-digital", method="post", autocomplete="on")
+      form(action="./models/albuns-digitais.js", method="post", autocomplete="on")
         .tab-content
           // Página dos Dados
           .tab-pane.active.-tab#dados(role="tabpanel", aria-labelledby="dados-tab")
@@ -145,10 +145,8 @@ section
               label.form-label(for="objetivos") Objetivos
               textarea.form-control(readonly, type="text", name="objetivos", rows="3").
                 O projeto tem como objetivo visibilizar a beleza a cultura e a ancestralidade negra existentes no Mato Grosso do Sul, historicamente apagados e fora dos padrões estéticos eurocêntricos.
-                                                        
-Oportunizará assim, as discussões étnico-raciais capazes de qualificar e encorajar as professoras e professores a trabalharem com a problemática da população negra, em sala de aula, na tentativa de diminuir o arranjo da desigualdade existente no país.
-                                                        
-Para isso, a partir das fotografias selecionadas para a mostra fotográfica, irá se elaborar um álbum de fotografias que ao ser finalizado, será direcionado para escolas públicas, com a intenção de contribuir com o debate da Lei 10.639/03 que determina o ensino de História e Cultura Afro-brasileira nas escolas.
+                Oportunizará assim, as discussões étnico-raciais capazes de qualificar e encorajar as professoras e professores a trabalharem com a problemática da população negra, em sala de aula, na tentativa de diminuir o arranjo da desigualdade existente no país.
+                Para isso, a partir das fotografias selecionadas para a mostra fotográfica, irá se elaborar um álbum de fotografias que ao ser finalizado, será direcionado para escolas públicas, com a intenção de contribuir com o debate da Lei 10.639/03 que determina o ensino de História e Cultura Afro-brasileira nas escolas.
                                                     
             .col-md-12
               label.form-label(for="regras") Regras
