@@ -9,15 +9,15 @@
   "author": "Laura Nunes",
   "license": "ISC",
   "dependencies": {
-    "@babel/core": "^7.15.5",
-    "@babel/node": "^7.15.4",
-    "@babel/preset-env": "^7.15.6",
+    "@babel/core": "^7.16.0",
+    "@babel/node": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
     "express": "^4.17.1",
     "pg": "^8.7.1",
     "pg-hstore": "^2.3.4",
     "pug": "^3.0.2",
     "sequelize": "^6.7.0",
-    "sequelize-cli": "^6.2.0"
+    "sequelize-cli": "^6.3.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"

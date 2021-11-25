@@ -6,7 +6,8 @@ class AlbumController {
         try {
             //await: aguarda até receber a resposta do BD
             const todosOsAlbuns = await database.Albuns_digitais.findAll();
-            return res.status(200).json(todosOsAlbuns);
+            //return res.status(200).json(todosOsAlbuns);
+            res.render('pagAlbum');
         } catch (error) {
             return res.status(500).json(error.message);
         }

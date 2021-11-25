@@ -68,13 +68,6 @@ app.get('/relatorio', function (req, resp) {
 
 
 /* rotas
-app.get('/teste', (req, res) => res
-    .status(200)
-    .send({
-        mensagem: 'Bem vinda!'
-    })
-);
-
 
 app.use('/publico', express.static(__dirname + '/publico'));
 
