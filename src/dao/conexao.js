@@ -6,7 +6,7 @@ const pool = new Pool({
     database: 'prjnd',
     password: 'user-prjnd',
     port: 3245
-    //ou 5432
+    //ou 5432 3245
 })
 
 /* 

@@ -16,7 +16,11 @@
     "pg": "^8.7.1",
     "pg-hstore": "^2.3.4",
     "pug": "^3.0.2",
+<<<<<<< HEAD
     "sequelize": "^6.7.0",
+=======
+    "sequelize": "^6.11.0",
+>>>>>>> a7e8537eb5c04c4f02659590b835bdf3a9c56fa2
     "sequelize-cli": "^6.3.0"
   },
   "devDependencies": {
