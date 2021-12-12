@@ -1,13 +1,13 @@
 const database = require('../models');
 
 class AlbumController {
-    //async: espera resolver tudo dentro do método antes do encio da resposta
+    //async: espera resolver tudo dentro do método antes do envio da resposta
     static async pegaTodosOsAlbuns(req, res) {
         try {
             //await: aguarda até receber a resposta do BD
             const todosOsAlbuns = await database.Albuns_digitais.findAll();
             //return res.status(200).json(todosOsAlbuns);
-            res.render('pagAlbum');
+            res.render('pagRelatorioAlbum', { todosOsAlbuns });
         } catch (error) {
             return res.status(500).json(error.message);
         }

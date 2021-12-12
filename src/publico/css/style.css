@@ -1,10 +1,15 @@
+
+
+/*Era mais ou menos isso que eu queria para o estilo da Mostra Fotográfica
+mas decidi descartar essa ideia já que não tava ficando legal
+
 body {
-    /* Usei isso para aplicar o Golden Ration nesta página
+    Usei isso para aplicar o Golden Ration nesta página
     background-image: url(img/goldenRatio.jpeg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    */
+    
 
     
     background: linear-gradient( to left, #FAD8CC 62%, #D97C0B 38%);
@@ -32,3 +37,4 @@ p, label, h2, h1 {
     margin-right: 100px;
     margin-left: 60px;
 }
+*/

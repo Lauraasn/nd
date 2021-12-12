@@ -5,8 +5,8 @@ const pool = new Pool({
     host: 'localhost',
     database: 'prjnd',
     password: 'user-prjnd',
-    port: 3245
-    //ou 5432 3245
+    port: 5432
+    //ou 3245
 })
 
 /* 

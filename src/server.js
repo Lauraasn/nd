@@ -3,6 +3,15 @@ import path from "path";
 const express = require("express");
 const app = express();
 
+require('dotenv').config();
+const cors = require('cors');
+
+var corsOptions = {
+    exposedHeaders: 'Authorization'
+}
+
+app.use(cors(corsOptions));
+
 // configuração do parser para requisições post
 app.use(express.json());
 app.use(express.urlencoded({
@@ -24,12 +33,6 @@ app.set('view engine', 'pug');
 const pool = require('./dao/conexao');
 */
 
-// colocar servidor no ar
-const PORTA = process.env.PORT || 8080;
-app.listen(PORTA,function() {
-    console.log(`Servidor rodando na porta ${PORTA}`); //antes era "8080" no lugar de "${PORTA}"
-});
-
 //Rota para a pasta "routes"
 const routes = require('./routes');
 routes(app);
@@ -48,8 +51,22 @@ app.get('/', function (req, resp) {
     resp.render('pagAlbum')
 });
 
-app.get('/relatorio', function (req, resp) {
+app.get('/loginADM', function(req, resp) {
+    resp.render('loginADM')
+});
+
+app.get('/relatorio', function(req, resp) {
     resp.render('pagRelatorioAlbum')
+});
+
+app.get('/relatorio2', function (req, resp) {
+    resp.sendFile(__dirname + '/views/pagRelatorioAlbum.html')
+});
+
+// colocar servidor no ar
+const PORTA = process.env.PORT || 8080;
+app.listen(PORTA,function() {
+    console.log(`Servidor rodando na porta ${PORTA}`); //antes era "8080" no lugar de "${PORTA}"
 });
 
 /* rotas da aplicação (feitas da forma antiga)

@@ -6,7 +6,7 @@ const AlbumController = require('../controllers/AlbumController');
 //Iniciando o router do express
 const router = Router();
 
-router.get('/albuns', AlbumController.pegaTodosOsAlbuns);
+router.get('/relatorio', AlbumController.pegaTodosOsAlbuns);
 router.get('/albuns/:id', AlbumController.pegaUmAlbum);
 router.post('/albuns', AlbumController.criaAlbum);
 router.put('/albuns/:id', AlbumController.atualizaAlbum);
