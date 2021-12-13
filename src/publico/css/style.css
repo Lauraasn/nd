@@ -1,4 +1,18 @@
+/*
+paleta de cores:
+marrom escuro --> #270101
+marrom claro --> #c49f91
+laranja escuro --> #c05c34
+laranja claro --> #f18657
+*/
 
+p, h1 {
+    color: #270101
+}
+
+.bg-brown {
+    background-color: #270101;
+}
 
 /*Era mais ou menos isso que eu queria para o estilo da Mostra Fotográfica
 mas decidi descartar essa ideia já que não tava ficando legal

@@ -1,25 +1,37 @@
 doctype html 
-html(lang="pt")  
+html(lang="pt-br")  
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width,initial-scale=1")
     link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css", integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x", crossorigin="anonymous")
-    //link(rel="stylesheet", href="/publico/css/style.css")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    link(rel="stylesheet", href="/publico/css/style.css")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js")
     script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js", integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj", crossorigin="anonymous")
     title Projeto Negritude em Debate
 
   body
-    section
-      nav.navbar.navbar-expand-lg.navbar-light.bg-light
-        a.navbar-brand
-          img(src="./publico/img/")
+
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-brown
+      a.navbar-brand(href="/")
+        img(src="./publico/img/LOGO NED.png", alt="logo", height="50 px")
+      button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarNavAltMarkup", aria-controls="navbarNavAltMarkup", aria-expanded="false", aria-label="Toggle navigation")
+        span.navbar-toggler-icon
+      #navbarNavAltMarkup.collapse.navbar-collapse
+        .navbar-nav 
+          a.nav-item.nav-link(href="/") 
+            |Negritude em Debate 
+            //span.sr-only (current)
+          a.nav-item.nav-link.active(href="#") Mostra Fotográfica Beleza Negra Resiste
+
+    section 
       article
         .container.mt-5.d-flex.flex-column.col-8.form-album
           // Título do Formulário
           .container.text-center
-            h2 Álbum Digital
+            h2 BELEZA NEGRA RESISTE 
+            //substituir com a imagem BNR
           // Botões do Tab
           ul.nav.nav-pills#myTab(role="tablist")
             li.nav-item(role="presentation")
@@ -163,7 +175,7 @@ html(lang="pt")
                     🖤 Cada pessoa só poderá ser premiada uma única vez
                     🖤 As fotografias serão selecionadas por um júri composto de pessoas pretas, que julgará a beleza negra a partir dos elementos que permitirão evidenciar as conexões com as raízes negras, com a ancestralidade negra, com a diáspora negra, com as pequenas Áfricas que existem em cada pessoa negra que vive em Mato Grosso do Sul
                     🖤 Toda fotografia deve ser encaminhada com a autorização de uso de imagem. A UFMS e o IFMS reservam para si, desde já, o direito incontestável de reproduzir as fotografias inscritas em seu material institucional a qualquer momento e por tempo indeterminado, dando os devidos créditos ao fotógrafo.
-                                                        
+                  //trocar emojis por: i.material-icons favorite                                      
                 .col-md-12
                   label.form-label(for="foto") Foto
                   input.form-control(type="file", name="foto")

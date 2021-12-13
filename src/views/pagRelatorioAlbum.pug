@@ -11,8 +11,7 @@ html(lang="pt-br")
 
   body  
     .container.mt-5
-      h1.text-center.mb-3 Relatório - Álbum Digital
-      img(src="./publico/img/mariaPereira.png", alt="foto", height="50 px")
+      h1.text-center.mb-3 Relatório - Mostra Fotográfica
       //p=`${todosOsAlbuns}`
       table.table.table-bordered
         thead
@@ -46,6 +45,7 @@ html(lang="pt-br")
               td #{album.titulo}
               td #{album.fotografa}
               td 
-                img(src=`./publico/img/#{album.foto}`, alt="foto", height="50 px") 
+                img(src=`./publico/img/mariaPereira.png`, alt="foto", height="50 px")
+                //anteriormente: img(src=`./publico/img/#{album.foto}`, alt="foto", height="50 px")
       
       

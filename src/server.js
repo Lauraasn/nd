@@ -37,30 +37,21 @@ const pool = require('./dao/conexao');
 const routes = require('./routes');
 routes(app);
 
-//rotas de teste
-app.get('/teste', function (req, resp) {
-    resp.render('teste');
-});
-
 //rotas da aplicação (pug)
-app.get('/album', function (req, resp) {
+app.get('/mostraFotografica', function (req, resp) {
     resp.render('pagAlbum')
 });
 
 app.get('/', function (req, resp) {
-    resp.render('pagAlbum')
+    resp.render('index')
 });
 
-app.get('/loginADM', function(req, resp) {
+app.get('/entrar', function(req, resp) {
     resp.render('loginADM')
 });
 
 app.get('/relatorio', function(req, resp) {
     resp.render('pagRelatorioAlbum')
-});
-
-app.get('/relatorio2', function (req, resp) {
-    resp.sendFile(__dirname + '/views/pagRelatorioAlbum.html')
 });
 
 // colocar servidor no ar
